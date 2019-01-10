@@ -13,13 +13,12 @@ function [R, C, K] = DetermineLPF(r1, r2, c1, c2, ra, rb, wc, Q, equal)
         if(r1 ~= 0 && c1 == 0)
             %finding c
             %wc = 1/rc
-            c = 1/(wc*r1);
+            c = 1/(r1*wc);
             C = [c c];
-            R = [r1 r1];
         end
         
         if(r1 == 0 && c1 ~= 0)
-            r = 1/(wc*c);
+            r = 1/(wc*c1);
             R = [r r];
             C = [c1 c1];
         end  

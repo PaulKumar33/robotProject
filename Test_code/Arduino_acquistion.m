@@ -36,7 +36,7 @@ while ishandle(plot_fig)
     data(count) = a_data;    
     set(plot_fig, 'XData', time, 'YData', data);
     axis([0 time(count) 0 5]);
-    pause(1/(2*1000)); 
+    %pause(1/(2*1000)); 
 end
 
 delete(a)
